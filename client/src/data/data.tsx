@@ -62,3 +62,40 @@ export const skills = {
   devops: ["Docker", "Kubernetes", "AWS", "CI/CD", "Terraform"],
   tools: ["Git", "Linux", "Vim/Neovim", "VS Code"],
 };
+export const containerVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+};
+
+export const experiences = [
+  {
+    company: "Tech Startup Inc.",
+    role: "Senior Full-Stack Engineer",
+    period: "2022 - Present",
+    highlights: [
+      "Led development of real-time analytics platform serving 100K+ users",
+      "Reduced API latency by 60% through optimization and caching strategies",
+      "Mentored junior developers and established coding standards",
+    ],
+  },
+  {
+    company: "Digital Agency",
+    role: "Full-Stack Developer",
+    period: "2020 - 2022",
+    highlights: [
+      "Built 15+ client applications using React and Node.js",
+      "Implemented CI/CD pipelines reducing deployment time by 80%",
+      "Architected microservices infrastructure on AWS",
+    ],
+  },
+  {
+    company: "Freelance",
+    role: "Independent Developer",
+    period: "2019 - 2020",
+    highlights: [
+      "Delivered custom web solutions for 20+ clients",
+      "Specialized in e-commerce and SaaS applications",
+      "Maintained 95%+ client satisfaction rate",
+    ],
+  },
+];
