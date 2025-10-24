@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { blogPosts, containerVariants } from "../../data/data";
+import { containerVariants } from "../../data/data";
 
-const BlogPage = ({ accent }) => (
+const BlogPage = ({ accent, blogPosts }) => (
   <motion.div
     variants={containerVariants}
     initial="hidden"
@@ -12,7 +12,7 @@ const BlogPage = ({ accent }) => (
       $ ls blog/
     </p>
     <div className="space-y-3">
-      {blogPosts.map((post, i) => (
+      {blogPosts.map((post, i: number) => (
         <motion.div
           key={post.id}
           initial={{ opacity: 0, x: -20 }}
