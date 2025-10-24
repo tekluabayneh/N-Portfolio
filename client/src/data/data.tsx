@@ -99,3 +99,21 @@ export const experiences = [
     ],
   },
 ];
+
+export const fontSizes = {
+  small: "text-sm",
+  medium: "text-base",
+  large: "text-lg",
+};
+export const accentOptions = [
+  { value: "cyan", color: "#00ffff", label: "Cyan" },
+  { value: "purple", color: "#a855f7", label: "Purple" },
+  { value: "magenta", color: "#ec4899", label: "Magenta" },
+  { value: "green", color: "#10b981", label: "Green" },
+];
+
+export const fontSizeOptions = [
+  { value: "small", label: "Small" },
+  { value: "medium", label: "Medium" },
+  { value: "large", label: "Large" },
+];
