@@ -1,27 +1,23 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Terminal as Settings } from "lucide-react";
-
 import SettingsModal from "../components/terminal/SettingsModal";
 import { accentColors } from "../constants/colors";
-import TerminalContext from "../components/TerminalContent";
+import TerminalContext from "../components/terminal/TerminalContent";
+import type { CommandType, settingStateType } from "../types/dataType";
 
-const INITIAL_COMMANDS = [
+const INITIAL_COMMANDS: CommandType[] = [
   { input: "neofetch", output: { type: "neofetch" }, timestamp: new Date() },
 ];
-type AccentColor = keyof typeof accentColors;
 
 export default function Portfolio() {
-  const [settings, setSettings] = useState<{
-    accentColor: AccentColor;
-    fontSize: string;
-    transparency: number;
-  }>({
+  const [settings, setSettings] = useState<settingStateType>({
     accentColor: "cyan",
     fontSize: "medium",
     transparency: 0.1,
   });
-  const [commands, setCommands] = useState(INITIAL_COMMANDS);
+
+  const [commands, setCommands] = useState<CommandType[]>(INITIAL_COMMANDS);
   const [showSettings, setShowSettings] = useState(false);
 
   const [isMaximized, setIsMaximized] = useState(false);
