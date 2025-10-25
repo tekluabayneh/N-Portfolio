@@ -2,6 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Palette, Type, Droplets } from "lucide-react";
 import { accentOptions, fontSizeOptions } from "../../data/data";
+import type { SettingPropesType } from "../../types/dataType";
 
 export default function SettingsModal({
   show,
@@ -9,7 +10,7 @@ export default function SettingsModal({
   settings,
   onSettingsChange,
   accent,
-}) {
+}: SettingPropesType) {
   if (!show) return null;
 
   return (
