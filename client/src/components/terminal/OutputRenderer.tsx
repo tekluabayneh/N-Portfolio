@@ -9,8 +9,13 @@ import ContactPage from "../../pages/output/ContactPage";
 import ErrorPage from "../../pages/output/ErrorPage";
 import BlogPage from "../../pages/output/BlogPage";
 import ExperiencePage from "../../pages/output/ExperiencePage";
+import type { OutPutPropesType } from "../../types/dataType";
 
-export default function OutputRenderer({ output, accent, fontSize }) {
+export default function OutputRenderer({
+  output,
+  accent,
+  fontSize,
+}: OutPutPropesType) {
   if (!output) return null;
   switch (output.type) {
     case "neofetch":
