@@ -1,7 +1,8 @@
 import { containerVariants } from "../../data/data";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
-const About = ({ accent }) => {
+import type { accentColorsType } from "../../types/dataType";
+const About = ({ accent }: accentColorsType[0]) => {
   return (
     <motion.div
       variants={containerVariants}
