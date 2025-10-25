@@ -1,16 +1,22 @@
-import { useState, useRef, useEffect, type FormEvent } from "react";
+import React, { useState, useRef, useEffect, type FormEvent } from "react";
+import type { CommandPropesType } from "../../types/dataType";
 
-export default function CommandInput({ onCommand, accent, fontSize }) {
+export default function CommandInput({
+  onCommand,
+  accent,
+  fontSize,
+}: CommandPropesType) {
   const [input, setInput] = useState("");
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const inputRef = useRef(null);
 
   useEffect(() => {
+    //@ts-ignore
     inputRef.current?.focus();
   }, []);
 
-  const handleSubmit = (e:FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (input.trim()) {
       onCommand(input);
@@ -20,7 +26,7 @@ export default function CommandInput({ onCommand, accent, fontSize }) {
     }
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
     if (e.key === "ArrowUp") {
       e.preventDefault();
       if (history.length > 0) {
