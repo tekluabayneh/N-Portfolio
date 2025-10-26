@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { containerVariants } from "../../data/data";
+import type { BlogPageType } from "../../types/dataType";
 
-const BlogPage = ({ accent, blogPosts }) => (
+const BlogPage = ({ accent, blogPosts }: BlogPageType) => (
   <motion.div
     variants={containerVariants}
     initial="hidden"
