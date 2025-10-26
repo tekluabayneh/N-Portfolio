@@ -1,7 +1,14 @@
 import { containerVariants, skills } from "../../data/data";
 import { motion } from "framer-motion";
 import { Code2, Database, Globe, Cpu, Zap, Palette } from "lucide-react";
-const Skills = ({ accent }) => {
+const Skills = ({
+  accent,
+}: {
+  accent: {
+    primary: string;
+    glow: string;
+  };
+}) => {
   return (
     <motion.div
       variants={containerVariants}
