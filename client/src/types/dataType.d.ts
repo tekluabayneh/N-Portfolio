@@ -8,13 +8,17 @@ export type CommandPropesType = {
   onCommand: (input: type) => void;
   accent: accentColorsType[0];
   fontSize: string;
-  output?: string;
+  output: {
+    type: string;
+    message: string;
+  };
 };
 export type OutPutPropesType = {
   accent: accentColorsType[0];
   fontSize: string;
   output: {
     type: string;
+    message: string;
   };
 };
 
@@ -49,4 +53,21 @@ export type settingStateType = {
   accentColor: AccentColor;
   fontSize: "small" | "medium" | "large";
   transparency: number;
+};
+
+export type blogpostType = {
+  id: number;
+  title: string;
+  date: string;
+  excerpt: string;
+  tags: string[];
+};
+
+interface BlogPageType {
+  accent: accentColorsType[0];
+  blogPosts: blogpostType[];
+}
+export type neoFetchtype = {
+  fontSize: string;
+  accent: accentColorsType[0];
 };
