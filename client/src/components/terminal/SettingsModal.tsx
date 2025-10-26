@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Palette, Type, Droplets } from "lucide-react";
 import { accentOptions, fontSizeOptions } from "../../data/data";
