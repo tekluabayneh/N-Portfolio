@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 
 import { containerVariants } from "../../data/data";
-const Neofetch = ({ accent, fontSize }) => {
+import type { neoFetchtype } from "../../types/dataType";
+const Neofetch = ({ accent, fontSize }: neoFetchtype) => {
   return (
     <motion.div
       variants={containerVariants}
