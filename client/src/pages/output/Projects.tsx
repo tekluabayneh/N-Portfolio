@@ -1,7 +1,14 @@
 import { containerVariants, projects } from "../../data/data";
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
-const Projects = ({ accent }) => {
+const Projects = ({
+  accent,
+}: {
+  accent: {
+    primary: string;
+    glow: string;
+  };
+}) => {
   return (
     <motion.div
       variants={containerVariants}
