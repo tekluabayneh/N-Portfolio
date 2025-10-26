@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { containerVariants, experiences } from "../../data/data";
 
-const ExperiencePage = ({ accent }) => {
+const ExperiencePage = ({
+  accent,
+}: {
+  accent: {
+    primary: string;
+  };
+}) => {
   return (
     <motion.div
       variants={containerVariants}
