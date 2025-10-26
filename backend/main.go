@@ -1,7 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"log"
+
+	"github.com/joho/godotenv"
+	"github.com/portfolio/2/app"
+)
 
 func main() {
-fmt.Println("test")
+		err := godotenv.Load()
+
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+app.New().Start()
 }
