@@ -2,7 +2,14 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import { containerVariants } from "../../data/data";
 
-const ResumePage = ({ accent }) => (
+const ResumePage = ({
+  accent,
+}: {
+  accent: {
+    primary: string;
+    glow: string;
+  };
+}) => (
   <motion.div
     variants={containerVariants}
     initial="hidden"
