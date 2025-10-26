@@ -2,7 +2,14 @@ import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { containerVariants } from "../../data/data";
 
-const ContactPage = ({ accent }) => (
+const ContactPage = ({
+  accent,
+}: {
+  accent: {
+    primary: string;
+    glow: string;
+  };
+}) => (
   <motion.div
     variants={containerVariants}
     initial="hidden"
