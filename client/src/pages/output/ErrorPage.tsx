@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import { containerVariants } from "../../data/data";
-import type {  OutPutPropesType } from "../../types/dataType";
 
-const ErrorPage = ({ output }: OutPutPropesType) => (
+const ErrorPage = ({
+  output,
+}: {
+  output: {
+    type: string;
+    message: string;
+  };
+}) => (
   <motion.div
     variants={containerVariants}
     initial="hidden"

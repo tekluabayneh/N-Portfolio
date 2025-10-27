@@ -18,7 +18,7 @@ export type OutPutPropesType = {
   fontSize: string;
   output: {
     type: string;
-    message: string;
+    message?: string;
   };
 };
 

@@ -117,3 +117,50 @@ export const fontSizeOptions = [
   { value: "medium", label: "Medium" },
   { value: "large", label: "Large" },
 ];
+
+export const info = {
+  user: "tekluabayneh",
+  hostname: "archlinux",
+  name: "Teklu Abayneh",
+  title: "Full-Stack Software Engineer",
+  uptime: "1+ years experience",
+  shell: "React/TypeScript",
+  skills: [
+    "Full-Stack Software Engineer",
+    "System Architecture",
+    "Performance Optimization",
+    "Open Source Contributor",
+  ],
+};
+
+export const colorPalette = [
+  "#1e1e2e",
+  "#89b4fa",
+  "#cba6f7",
+  "#f38ba8",
+  "#a6e3a1",
+  "#f9e2af",
+  "#fab387",
+  "#94e2d5",
+];
+
+export const archAscii = `                  
+                 -\`
+                .o+\`
+               \`ooo/
+              \`+oooo:
+             \`+oooooo:
+             -+oooooo+:
+           \`/:-:++oooo+:
+          \`/++++/+++++++:
+         \`/++++++++++++++:
+        \`/+++ooooooooooooo/\`
+       ./ooosssso++osssssso+\`
+      .oossssso-\`\`\`\`/ossssss+\`
+     -osssssso.      :ssssssso.
+    :osssssss/        osssso+++.
+   /ossssssss/        +ssssooo/-
+ \`/ossssso+/:-        -:/+osssso+-
+\`+sso+:-\`                 \`.-/+oso:
+\`++:.                           \`-/+/
+.\`                                 \`/`;
