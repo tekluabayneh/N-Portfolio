@@ -14,13 +14,10 @@ type App struct {
 }
 
 func New() *App {
-
 	app := &App{
 		router: routes.LoadRouter(),
 	}
-
 	return app
-
 }
 
 func (app *App) Start() {
