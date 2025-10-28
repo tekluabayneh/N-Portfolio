@@ -1,9 +1,12 @@
 package routes
 
 import (
+	"net/http"
+
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/cors"
+	"github.com/portfolio/2/handler"
 )
 
 
@@ -19,5 +22,25 @@ router := chi.NewRouter()
 		AllowCredentials: true,
 		MaxAge:           300,
 	}))
+	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte(`{"message":"opps! it's a live"}`))
+
+	})
+router.Route("/", func(r chi.Router){
+ SendEmailRouter(r)
+})
+
 return router
+}
+
+
+func SendEmailRouter(router chi.Router){ 
+	SendEmailHandler := &handler.SendEmailType{ 
+		
+	}
+	
+	router.Get("/SendEmail", SendEmailHandler.SendEmail)
+	 
 }
