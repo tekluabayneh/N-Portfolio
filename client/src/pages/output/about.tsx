@@ -41,7 +41,7 @@ const About = ({ accent }: accentColorsType[0]) => {
           </p>
           <div className="flex gap-4 mt-6 flex-wrap">
             <a
-              href="https://github.com"
+              href="https://github.com/tekluabayneh"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 hover:scale-105"
@@ -53,7 +53,7 @@ const About = ({ accent }: accentColorsType[0]) => {
               <Github className="w-5 h-5" /> GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/teklu-abayneh/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 hover:scale-105"
@@ -65,7 +65,7 @@ const About = ({ accent }: accentColorsType[0]) => {
               <Linkedin className="w-5 h-5" /> LinkedIn
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/AbaynehTek13155"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 hover:scale-105"
