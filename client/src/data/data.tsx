@@ -55,11 +55,11 @@ export const blogPosts = [
 ];
 
 export const skills = {
-  languages: ["JavaScript/TypeScript", "Python", "Go", "Rust", "C++"],
-  frontend: ["React", "Next.js", "Vue", "Svelte", "Tailwind CSS"],
-  backend: ["Node.js", "FastAPI", "Express", "GraphQL", "REST"],
-  databases: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
-  devops: ["Docker", "Kubernetes", "AWS", "CI/CD", "Terraform"],
+  languages: ["JavaScript", "TypeScript", "Python", "Go"],
+  frontend: ["React", "Next.js", "HTML5", "CSS", "Tailwind CSS"],
+  backend: ["Node.js", "FastAPI", "Express", "REST"],
+  databases: ["PostgreSQL", "MongoDB", "MySql"],
+  devops: ["Docker", "AWS", "CI/CD"],
   tools: ["Git", "Linux", "Vim/Neovim", "VS Code"],
 };
 export const containerVariants = {
