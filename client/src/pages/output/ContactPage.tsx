@@ -36,42 +36,42 @@ const ContactPage = ({
       </p>
       <div className="space-y-3">
         <a
-          href="mailto:hello@example.com"
+          href="mailto:tekluabayneh@example.com"
           className="flex items-center gap-3 p-3 rounded-lg border hover:scale-105 transition-all duration-300"
           style={{ borderColor: accent.primary }}
         >
           <Mail className="w-5 h-5" style={{ color: accent.primary }} />
-          <span>hello@example.com</span>
+          <span>tekluabayneh@example.com</span>
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/tekluabayneh"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 p-3 rounded-lg border hover:scale-105 transition-all duration-300"
           style={{ borderColor: accent.primary }}
         >
           <Github className="w-5 h-5" style={{ color: accent.primary }} />
-          <span>github.com/username</span>
+          <span>github.com/tekluabayneh</span>
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/teklu-abayneh"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 p-3 rounded-lg border hover:scale-105 transition-all duration-300"
           style={{ borderColor: accent.primary }}
         >
           <Linkedin className="w-5 h-5" style={{ color: accent.primary }} />
-          <span>linkedin.com/in/username</span>
+          <span>linkedin.com/in/tekluabayneh</span>
         </a>
         <a
-          href="https://twitter.com"
+          href="https://x.com/AbaynehTek13155"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 p-3 rounded-lg border hover:scale-105 transition-all duration-300"
           style={{ borderColor: accent.primary }}
         >
           <Twitter className="w-5 h-5" style={{ color: accent.primary }} />
-          <span>@username</span>
+          <span>@TekluAbayneh</span>
         </a>
       </div>
     </div>
