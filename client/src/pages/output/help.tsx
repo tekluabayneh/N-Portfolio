@@ -23,7 +23,6 @@ const Help = ({
           { cmd: "projects, ls", desc: "List all projects" },
           { cmd: "skills", desc: "Show technical skills" },
           { cmd: "experience", desc: "View work experience" },
-          { cmd: "blog", desc: "Read blog posts" },
           { cmd: "resume, cv", desc: "Download resume" },
           { cmd: "contact", desc: "Get in touch" },
           { cmd: "neofetch", desc: "System information" },

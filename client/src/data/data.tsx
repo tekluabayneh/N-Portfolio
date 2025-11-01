@@ -1,33 +1,71 @@
+import { Mail, Github, Linkedin, Twitter, Send} from "lucide-react";
+ export const socialLinks = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: "tekluabayneh@example.com",
+      href: "mailto:tekluabayneh@example.com"
+    },
+    {
+      icon: Send,
+      label: "Telegram",
+      value: "@tekluabayneh",
+      href: "https://t.me/@Dxuecd"
+    },
+    {
+      icon: Github,
+      label: "GitHub",
+      value: "github.com/tekluabayneh",
+      href: "https://github.com/tekluabayneh"
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "linkedin.com/in/tekluabayneh",
+      href: "https://www.linkedin.com/in/teklu-abayneh"
+    },
+    {
+      icon: Twitter,
+      label: "Twitter",
+      value: "@TekluAbayneh",
+      href: "https://x.com/AbaynehTek13155"
+    }
+  ];
+  
+
 export const projects = [
   {
     id: 1,
-    name: "AI Code Assistant",
+    name: "Collaborative Code Editor",
     description:
-      "Intelligent code completion and refactoring tool powered by GPT-4",
-    tech: ["TypeScript", "Python", "React", "FastAPI"],
-    github: "https://github.com",
+      "Real-time collaborative code editor designed for teams and developers to build scalable applications efficiently. Includes integrated code completion and an in-app chat for seamless collaboration.",
+    tech: ["TypeScript", "Next.js", "TailwindCss", "Node.js","Express", "MySql"],
+    github: "https://github.com/tekluabayneh/colaborative_code_editor",
     live: "https://demo.com",
     status: "Production",
   },
   {
     id: 2,
-    name: "Real-time Analytics Dashboard",
+    name: "Edge-Aware Cybersecurity Orchestrator",
     description:
-      "High-performance data visualization platform with WebSocket streaming",
-    tech: ["Next.js", "D3.js", "Node.js", "Redis"],
-    github: "https://github.com",
+      "Comprehensive security platform that protects devices and smart home systems by deploying optimized security software. Designed for high performance and reliability across diverse environments.",
+    tech: ["Go", "Typescript", "Python", "React", "Docker"],
+    github: "https://github.com/tekluabayneh/Edge-Aware-Cybersecurity-Orchestrator",
     live: "https://demo.com",
     status: "Active",
   },
   {
     id: 3,
-    name: "Distributed Task Queue",
-    description: "Scalable microservices orchestration system",
-    tech: ["Go", "Docker", "Kubernetes", "RabbitMQ"],
-    github: "https://github.com",
-    status: "Open Source",
+    name: "Micro Task Marketplace",
+    description:
+      "Decentralized micro-task platform that connects clients with freelancers through intelligent matchmaking. Features a real-time assistant chatbot to guide users and streamline task management across services.",
+    tech: ["Node.js", "Javascript", "React", , "MongoDB", "Docker", "Google Auth", "Github Auth"],
+    github: "https://github.com/tekluabayneh/Micro-Task_Marketplace",
+    live: "https://demo.com",
+    status: "Production",
   },
 ];
+
 
 export const blogPosts = [
   {

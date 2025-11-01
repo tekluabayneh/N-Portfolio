@@ -7,7 +7,6 @@ import Skills from "../../pages/output/skills";
 import ResumePage from "../../pages/output/ResumePage";
 import ContactPage from "../../pages/output/ContactPage";
 import ErrorPage from "../../pages/output/ErrorPage";
-import BlogPage from "../../pages/output/BlogPage";
 import ExperiencePage from "../../pages/output/ExperiencePage";
 import type { OutPutPropesType } from "../../types/dataType";
 
@@ -32,8 +31,6 @@ export default function OutputRenderer({
       return <Skills accent={accent} />;
     case "experience":
       return <ExperiencePage accent={accent} />;
-    case "blog":
-      return <BlogPage accent={accent} blogPosts={blogPosts} />;
     case "resume":
       return <ResumePage accent={accent} />;
     case "contact":

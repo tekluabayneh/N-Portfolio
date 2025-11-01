@@ -56,8 +56,6 @@ export default function Portfolio() {
       case "projects":
       case "ls":
         return { type: "projects" };
-      case "blog":
-        return { type: "blog" };
       case "contact":
         return { type: "contact" };
       case "resume":
