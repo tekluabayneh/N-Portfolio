@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import { containerVariants } from "../../data/data";
+import ResumeButton from "../../components/terminal/ResumeDownloader";
 
 const ResumePage = ({
   accent,
@@ -10,6 +11,10 @@ const ResumePage = ({
     glow: string;
   };
 }) => (
+
+
+
+  
   <motion.div
     variants={containerVariants}
     initial="hidden"
@@ -32,16 +37,7 @@ const ResumePage = ({
         Download Resume
       </h3>
       <p className="text-gray-400 mb-6">Get my full resume in PDF format</p>
-      <button
-        className="px-6  cursor-pointer py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105"
-        style={{
-          backgroundColor: accent.primary,
-          color: "#000",
-          boxShadow: `0 0 20px ${accent.glow}`,
-        }}
-      >
-        Download Resume
-      </button>
+      <ResumeButton accent={accent}/>
     </div>
   </motion.div>
 );
