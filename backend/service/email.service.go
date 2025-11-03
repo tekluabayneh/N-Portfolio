@@ -10,10 +10,11 @@ import (
 func SendEmail(senderName, senderEmail, message string) error {
 	m := gomail.NewMessage()
 	m.SetHeader("From", senderEmail)
-	m.SetHeader("To", "tekluabaynehupwork@gmail.com")
+	m.SetHeader("To", "tekluabayneh@gmail.com")
 	m.SetAddressHeader("Cc", "tekluabayneh@gmail.com", "Teklu")
 	m.SetHeader("Subject", "Portfolio")
 	password := os.Getenv("USER_PASSWORD")
+	portfolio := os.Getenv("PORTFOLIO")
 	htmlBody := fmt.Sprintf(`<!doctype html>
 <html>
   <head>
@@ -83,9 +84,8 @@ func SendEmail(senderName, senderEmail, message string) error {
 </html>`, senderName, senderEmail, message)
 
 	// Plain-text fallback
-	plainBody := fmt.Sprintf("New message from %s <%s>\n\n%s\n\nView: https://your-portfolio.example.com", senderName, senderEmail, message)
+	plainBody := fmt.Sprintf("New message from %s <%s>\n\n%s\n\nView %v:", senderName, senderEmail, message, portfolio)
 
-	
 	m.SetBody("text/html", htmlBody)
 	m.AddAlternative("text/plain", plainBody)
 
