@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 import { containerVariantsForm } from "../../data/data";
 import SocialLinks from "../../components/contactSocial";
 import axios from "axios";
-
+import toast from "react-hot-toast";
 const ContactPage = ({ accent }:{accent:{ 
   primary:string, 
   glow:string
@@ -21,11 +21,12 @@ const ContactPage = ({ accent }:{accent:{
     e.preventDefault();
     console.log(formData);
 try {
-  const response = await axios.post("/send/Email")
-  console.log(response)
-  
-} catch (error) {
-  console.log(error)
+  const response = await axios.post("http://localhost:8000/SendEmail",formData)
+  if ( response.status == 200){ 
+  toast.success(response.data.message);
+  }
+} catch (err:any) {
+  toast.error(err.response.data.message);
 }
   };
 
