@@ -1,25 +1,64 @@
 package handler
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 
 	"github.com/portfolio/2/service"
 )
 
-type SendEmailType struct{ 
-
+type SendEmailType struct {
 }
-type messageType struct{ 
-SenderName, SenderEmail, Message string
+type IncomingDataForm struct {
+	Name    string `json:name`
+	Email   string `json:email`
+	Message string `json:message`
+}
+type messageType struct {
+	SenderName, SenderEmail, Message string
 }
 
-func (h *SendEmailType) SendEmail(w http.ResponseWriter, r *http.Request)  {
-	data := &messageType{
-		SenderName: "one",
-		SenderEmail: "tekluabayneh@gmail.com",
-		Message: "man i guess this work is getting better and better we don't give up right",
+func (h *SendEmailType) SendEmail(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	var formType IncomingDataForm
+
+	if err := json.NewDecoder(r.Body).Decode(&formType); err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		json.NewEncoder(w).Encode(map[string]string{
+			"message": "Invalid json  body",
+			"detail":  err.Error(),
+		})
+		return
 	}
-   service.SendEmail(data.SenderName, data.SenderEmail, data.Message)
-	fmt.Println("test work")	
+
+	data := &messageType{
+		SenderName:  formType.Name,
+		SenderEmail: formType.Email,
+		Message:     formType.Message,
+	}
+	fmt.Println(formType)
+
+	if formType.Name == "" || formType.Email == "" || formType.Message == "" {
+		w.WriteHeader(http.StatusBadRequest)
+		json.NewEncoder(w).Encode(map[string]string{
+			"error": "All fields (name, email, message) are required",
+		})
+	}
+
+	if err := service.SendEmail(data.SenderName, data.SenderEmail, data.Message); err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(map[string]string{
+			"message": "Failed to send message",
+			"detail":  err.Error(),
+		})
+		return
+	}
+
+	// success
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(map[string]string{
+		"message": "form submitted successfully",
+	})
+
 }
