@@ -44,6 +44,7 @@ func (h *SendEmailType) SendEmail(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(map[string]string{
 			"error": "All fields (name, email, message) are required",
 		})
+		return
 	}
 
 	if err := service.SendEmail(data.SenderName, data.SenderEmail, data.Message); err != nil {
