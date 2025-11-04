@@ -15,7 +15,12 @@ func SendEmail(senderName, senderEmail, message string) error {
 	m.SetHeader("Subject", "Portfolio")
 	password := os.Getenv("USER_PASSWORD")
 	portfolio := os.Getenv("PORTFOLIO")
-	htmlBody := fmt.Sprintf(`<!doctype html>
+	fmt.Println(password)
+	if password == "" {
+		return fmt.Errorf("internal server error: USER_PASSWORD not set")
+	}
+
+	htmlBody := fmt.Sprintf(`<!doctype html> 
 <html>
   <head>
     <meta charset="utf-8">
@@ -83,13 +88,12 @@ func SendEmail(senderName, senderEmail, message string) error {
   </body>
 </html>`, senderName, senderEmail, message)
 
-	// Plain-text fallback
 	plainBody := fmt.Sprintf("New message from %s <%s>\n\n%s\n\nView %v:", senderName, senderEmail, message, portfolio)
 
 	m.SetBody("text/html", htmlBody)
 	m.AddAlternative("text/plain", plainBody)
 
-	d := gomail.NewDialer("smtp.gmail.com", 587, "tekluabayneh@gmail.com", password)
+	d := gomail.NewDialer("smtp.gmail.com", 465, "tekluabayneh@gmail.com", password)
 	if err := d.DialAndSend(m); err != nil {
 		return err
 	}
