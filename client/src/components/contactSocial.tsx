@@ -1,7 +1,6 @@
 import {motion} from "framer-motion" 
 import { socialLinks } from "../data/data"
 import { ArrowRight } from "lucide-react"
-import { div } from "framer-motion/client"
  const SocialLinks = ({accent}:{
     accent:{ 
         primary:string,
