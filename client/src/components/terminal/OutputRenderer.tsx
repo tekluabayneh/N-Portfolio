@@ -1,4 +1,3 @@
-import { blogPosts } from "../../data/data";
 import Neofetch from "../../pages/output/neofetch";
 import Help from "../../pages/output/help";
 import About from "../../pages/output/about";

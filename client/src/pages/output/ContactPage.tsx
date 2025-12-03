@@ -19,7 +19,6 @@ const ContactPage = ({ accent }:{accent:{
 
   const handleSubmit = async (e:FormEvent) => {
     e.preventDefault();
-    console.log(formData);
 try {
   const response = await axios.post("http://localhost:8000/SendEmail",formData)
   if ( response.status == 200){ 

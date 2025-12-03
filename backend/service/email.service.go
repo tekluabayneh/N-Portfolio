@@ -15,7 +15,7 @@ func SendEmail(senderName, senderEmail, message string) error {
 	m.SetHeader("Subject", "Portfolio")
 	password := os.Getenv("USER_PASSWORD")
 	portfolio := os.Getenv("PORTFOLIO")
-	fmt.Println(password)
+
 	if password == "" {
 		return fmt.Errorf("internal server error: USER_PASSWORD not set")
 	}

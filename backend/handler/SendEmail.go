@@ -2,7 +2,6 @@ package handler
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"github.com/portfolio/2/service"
@@ -11,9 +10,9 @@ import (
 type SendEmailType struct {
 }
 type IncomingDataForm struct {
-	Name    string `json:name`
-	Email   string `json:email`
-	Message string `json:message`
+	Name    string `json:"name"`
+	Email   string `json:"email"`
+	Message string `json:"message"`
 }
 type messageType struct {
 	SenderName, SenderEmail, Message string
@@ -37,7 +36,6 @@ func (h *SendEmailType) SendEmail(w http.ResponseWriter, r *http.Request) {
 		SenderEmail: formType.Email,
 		Message:     formType.Message,
 	}
-	fmt.Println(formType)
 
 	if formType.Name == "" || formType.Email == "" || formType.Message == "" {
 		w.WriteHeader(http.StatusBadRequest)
