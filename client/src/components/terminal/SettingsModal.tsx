@@ -82,7 +82,6 @@ export default function SettingsModal({
                     style={{
                       borderColor: option.color,
                       backgroundColor: `${option.color}20`,
-                      ringColor: option.color,
                     }}
                   >
                     <div
@@ -122,7 +121,6 @@ export default function SettingsModal({
                         settings.fontSize === option.value
                           ? `${accent.primary}20`
                           : "rgba(0,0,0,0.3)",
-                      ringColor: accent.primary,
                     }}
                   >
                     <p className="text-sm font-medium">{option.label}</p>

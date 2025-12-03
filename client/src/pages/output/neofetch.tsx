@@ -1,17 +1,7 @@
 import { motion } from "framer-motion";
-import { archAscii, colorPalette, info } from "../../data/data";
-
+import { archAscii, colorPalette, info, itemVariants } from "../../data/data";
 export default function Terminal() {
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.4 },
-    },
-  };
-
-  return (
+    return (
     <div className="w-full max-w-6xl">
       {/* Neofetch Output */}
       <motion.div

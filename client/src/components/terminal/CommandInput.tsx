@@ -12,7 +12,7 @@ export default function CommandInput({
   const inputRef = useRef(null);
 
   useEffect(() => {
-    //@ts-ignore
+    //@ts-expect-error  we do have the input
     inputRef.current?.focus();
   }, []);
 

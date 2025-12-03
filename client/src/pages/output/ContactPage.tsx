@@ -5,8 +5,8 @@ import { containerVariantsForm } from "../../data/data";
 import SocialLinks from "../../components/contactSocial";
 import axios from "axios";
 import toast from "react-hot-toast";
-const ContactPage = ({ accent }:{accent:{ 
-  primary:string, 
+const ContactPage = ({ accent }:{accent:{
+  primary:string,
   glow:string
 }}) => {
   const [formData, setFormData] = useState({
@@ -15,13 +15,13 @@ const ContactPage = ({ accent }:{accent:{
     message: ""
   });
 
-  const [focusedField, setFocusedField] = useState(null);
+  const [focusedField, setFocusedField] = useState<string | null>(null)
 
   const handleSubmit = async (e:FormEvent) => {
     e.preventDefault();
 try {
   const response = await axios.post("http://localhost:8000/SendEmail",formData)
-  if ( response.status == 200){ 
+  if ( response.status == 200){
   toast.success(response.data.message);
   }
 } catch (err:any) {
@@ -29,7 +29,7 @@ try {
 }
   };
 
- 
+
 
   return (
     <motion.div
@@ -210,7 +210,7 @@ try {
         </div>
         </motion.div>
 
-      
+
   );
 };
 

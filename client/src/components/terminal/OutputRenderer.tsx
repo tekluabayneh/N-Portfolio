@@ -12,12 +12,11 @@ import type { OutPutPropesType } from "../../types/dataType";
 export default function OutputRenderer({
   output,
   accent,
-  fontSize,
 }: OutPutPropesType) {
   if (!output) return null;
   switch (output.type) {
     case "neofetch":
-      return <Neofetch accent={accent} fontSize={fontSize} />;
+      return <Neofetch/>;
     case "help":
       return <Help accent={accent} />;
     case "about":

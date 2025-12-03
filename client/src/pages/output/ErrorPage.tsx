@@ -6,7 +6,8 @@ const ErrorPage = ({
 }: {
   output: {
     type: string;
-    message: string;
+    message?: string | undefined
+
   };
 }) => (
   <motion.div

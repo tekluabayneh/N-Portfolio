@@ -1,8 +1,10 @@
 import { containerVariants } from "../../data/data";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import type { accentColorsType } from "../../types/dataType";
-const About = ({ accent }: accentColorsType[0]) => {
+const About= ({ accent }:{accent:{
+  primary:string,
+  glow:string
+}}) => {
   return (
     <motion.div
       variants={containerVariants}
@@ -26,10 +28,10 @@ const About = ({ accent }: accentColorsType[0]) => {
         </h2>
         <div className="space-y-3 text-gray-300 leading-relaxed">
           <p>
-            Hey! I'm a full-stack Software Engineer, 
+            Hey! I'm a full-stack Software Engineer,
             I build performant applications that solve real problems.
           </p>
-          
+
           <p>
             With 1+ years of experience, I specialize in modern web
             technologies, distributed systems, and developer tooling. I love
@@ -37,8 +39,8 @@ const About = ({ accent }: accentColorsType[0]) => {
             technologies like Rust
           </p>
           <p>
-          When I’m not coding, you’ll usually find me contributing to open-source projects, writing technical blogs, 
-           or tinkering with my Arch Linux setup — all part of my goal to make the world a little better through technology. 
+          When I’m not coding, you’ll usually find me contributing to open-source projects, writing technical blogs,
+           or tinkering with my Arch Linux setup — all part of my goal to make the world a little better through technology.
           </p>
           <div className="flex gap-4 mt-6 flex-wrap">
             <a

@@ -8,10 +8,6 @@ export type CommandPropesType = {
   onCommand: (input: type) => void;
   accent: accentColorsType[0];
   fontSize: string;
-  output: {
-    type: string;
-    message: string;
-  };
 };
 export type OutPutPropesType = {
   accent: accentColorsType[0];
@@ -68,6 +64,7 @@ interface BlogPageType {
   blogPosts: blogpostType[];
 }
 export type neoFetchtype = {
+  accent: accentColorsType;
   fontSize: string;
   accent: accentColorsType[0];
 };

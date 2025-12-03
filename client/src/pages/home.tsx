@@ -4,12 +4,22 @@ import { Terminal as Settings } from "lucide-react";
 import SettingsModal from "../components/terminal/SettingsModal";
 import { accentColors } from "../constants/colors";
 import TerminalContext from "../components/terminal/TerminalContent";
-import type { CommandType, settingStateType } from "../types/dataType";
-
 const INITIAL_COMMANDS: CommandType[] = [
   { input: "neofetch", output: { type: "neofetch" }, timestamp: new Date() },
 ];
 
+type CommandType = {
+  input: string;
+  output: { type: string; message?: string } | null;
+  timestamp: Date;
+};
+type AccentColorKey = keyof typeof accentColors;
+
+interface settingStateType {
+  accentColor: AccentColorKey; // now TS knows this is a valid key
+  fontSize: "small" | "medium" | "large";
+  transparency: number;
+}
 export default function Portfolio() {
   const [settings, setSettings] = useState<settingStateType>({
     accentColor: "cyan",
@@ -23,8 +33,7 @@ export default function Portfolio() {
   const [isMaximized, setIsMaximized] = useState(false);
   const terminalRef = useRef(null);
 
-  const accent = accentColors[settings.accentColor];
-
+const accent = accentColors[settings.accentColor];
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--accent-color",

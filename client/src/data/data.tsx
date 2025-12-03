@@ -31,7 +31,7 @@ import { Mail, Github, Linkedin, Twitter, Send} from "lucide-react";
       href: "https://x.com/AbaynehTek13155"
     }
   ];
-  
+
 
 export const projects = [
   {
@@ -156,7 +156,7 @@ export const colorPalette = [
   "#94e2d5",
 ];
 
-export const archAscii = `                  
+export const archAscii = `
                  -\`
                 .o+\`
                \`ooo/
@@ -187,3 +187,13 @@ export const containerVariantsForm = {
     }
   }
 };
+
+export const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.4 },
+    },
+  };
+
