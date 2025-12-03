@@ -1,8 +1,8 @@
 const ResumeButton = ({ accent }: { accent: { primary: string; glow: string } }) => {
   const downloadFiles = () => {
     const files = [
-      { path: "/resume.pdf", name: "Teklu_Resume.pdf" },
-      { path: "/resume_alt.pdf", name: "Teklu_Resume_Alt.pdf" },
+      { path: "/public/Resume.pdf", name: "Teklu_Resume.pdf" },
+      { path: "/Resume.pdf", name: "Teklu_Resume_Alt.pdf" },
     ];
 
     files.forEach((file) => {
