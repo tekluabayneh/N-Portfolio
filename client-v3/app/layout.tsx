@@ -41,7 +41,6 @@ export const viewport: Viewport = {
   colorScheme: 'dark',
   themeColor: '#0a0908',
 }
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -56,6 +55,8 @@ export default function RootLayout({
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
+
+
     </html>
   )
 }

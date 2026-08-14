@@ -18,6 +18,7 @@ import { SiteHeader } from '@/components/portfolio/site-header'
 import { SkillsSection } from '@/components/portfolio/skills-section'
 import { StatusHud } from '@/components/portfolio/status-hud'
 
+
 export default function Page() {
   const pages = [
     <PageShell key="top" align="end">
