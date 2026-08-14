@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import { ArrowUpRight, Code2, ExternalLink, Minus, Plus } from 'lucide-react'
 import type { Project } from '@/lib/portfolio-data'
 import { cn } from '@/lib/utils'
@@ -9,6 +8,7 @@ import { cn } from '@/lib/utils'
 const statusDot: Record<Project['status'], string> = {
   Production: 'bg-primary',
   'In Beta': 'bg-accent',
+  'In Progress': 'bg-accent',
   'Not Active': 'bg-faint',
 }
 
