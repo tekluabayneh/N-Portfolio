@@ -21,7 +21,7 @@ const item = {
 // Each big name line clips up from below with an eased mask.
 const nameLine = {
   hidden: { y: '110%' },
-  show: { y: '0%', transition: { duration: 0.9, ease: EASE } },
+  show: { y: '0%', transition: { duration: 1, ease: EASE } },
 }
 
 export function Hero() {

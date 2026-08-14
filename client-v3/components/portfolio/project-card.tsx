@@ -76,13 +76,6 @@ export function ProjectRow({ project, index }: { project: Project; index: number
             </div>
 
             <div className="flex flex-col gap-2 md:col-span-2 md:col-start-11">
-              <Link
-                href={`/projects/${project.slug}`}
-                className="flex items-center justify-between gap-2 bg-foreground px-3 py-2.5 font-mono text-xs uppercase tracking-wider text-background transition-colors hover:bg-primary hover:text-primary-foreground"
-              >
-                Case study
-                <ArrowUpRight className="size-3.5" />
-              </Link>
               {project.github && (
                 <a
                   href={project.github}
